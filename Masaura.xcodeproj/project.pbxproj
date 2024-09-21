@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07C08B962C7FC8A000AFAF3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C08B952C7FC8A000AFAF3B /* AppDelegate.swift */; };
+		07C08B982C7FC8A000AFAF3B /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07C08B972C7FC8A000AFAF3B /* GameScene.sks */; };
+		07C08B9A2C7FC8A100AFAF3B /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07C08B992C7FC8A100AFAF3B /* Actions.sks */; };
+		07C08B9C2C7FC8A100AFAF3B /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C08B9B2C7FC8A100AFAF3B /* GameScene.swift */; };
+		07C08B9E2C7FC8A100AFAF3B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C08B9D2C7FC8A100AFAF3B /* GameViewController.swift */; };
+		07C08BA12C7FC8A100AFAF3B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 07C08BA02C7FC8A100AFAF3B /* Base */; };
+		07C08BA32C7FC8A200AFAF3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C08BA22C7FC8A200AFAF3B /* Assets.xcassets */; };
+		07C08BA62C7FC8A200AFAF3B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 07C08BA52C7FC8A200AFAF3B /* Base */; };
+		07C08BB02C7FC8A200AFAF3B /* MasauraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C08BAF2C7FC8A200AFAF3B /* MasauraTests.swift */; };
+		07C08BBA2C7FC8A200AFAF3B /* MasauraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C08BB92C7FC8A200AFAF3B /* MasauraUITests.swift */; };
+		07C08BBC2C7FC8A200AFAF3B /* MasauraUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C08BBB2C7FC8A200AFAF3B /* MasauraUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07C08BAC2C7FC8A200AFAF3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07C08B8A2C7FC8A000AFAF3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07C08B912C7FC8A000AFAF3B;
+			remoteInfo = Masaura;
+		};
+		07C08BB62C7FC8A200AFAF3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07C08B8A2C7FC8A000AFAF3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07C08B912C7FC8A000AFAF3B;
+			remoteInfo = Masaura;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07C08B922C7FC8A000AFAF3B /* Masaura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Masaura.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07C08B952C7FC8A000AFAF3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		07C08B972C7FC8A000AFAF3B /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		07C08B992C7FC8A100AFAF3B /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		07C08B9B2C7FC8A100AFAF3B /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		07C08B9D2C7FC8A100AFAF3B /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		07C08BA02C7FC8A100AFAF3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		07C08BA22C7FC8A200AFAF3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		07C08BA52C7FC8A200AFAF3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		07C08BAB2C7FC8A200AFAF3B /* MasauraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MasauraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07C08BAF2C7FC8A200AFAF3B /* MasauraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasauraTests.swift; sourceTree = "<group>"; };
+		07C08BB52C7FC8A200AFAF3B /* MasauraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MasauraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07C08BB92C7FC8A200AFAF3B /* MasauraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasauraUITests.swift; sourceTree = "<group>"; };
+		07C08BBB2C7FC8A200AFAF3B /* MasauraUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasauraUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07C08B8F2C7FC8A000AFAF3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07C08BA82C7FC8A200AFAF3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07C08BB22C7FC8A200AFAF3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07C08B892C7FC8A000AFAF3B = {
+			isa = PBXGroup;
+			children = (
+				07C08B942C7FC8A000AFAF3B /* Masaura */,
+				07C08BAE2C7FC8A200AFAF3B /* MasauraTests */,
+				07C08BB82C7FC8A200AFAF3B /* MasauraUITests */,
+				07C08B932C7FC8A000AFAF3B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07C08B932C7FC8A000AFAF3B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07C08B922C7FC8A000AFAF3B /* Masaura.app */,
+				07C08BAB2C7FC8A200AFAF3B /* MasauraTests.xctest */,
+				07C08BB52C7FC8A200AFAF3B /* MasauraUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07C08B942C7FC8A000AFAF3B /* Masaura */ = {
+			isa = PBXGroup;
+			children = (
+				07C08B952C7FC8A000AFAF3B /* AppDelegate.swift */,
+				07C08B972C7FC8A000AFAF3B /* GameScene.sks */,
+				07C08B992C7FC8A100AFAF3B /* Actions.sks */,
+				07C08B9B2C7FC8A100AFAF3B /* GameScene.swift */,
+				07C08B9D2C7FC8A100AFAF3B /* GameViewController.swift */,
+				07C08B9F2C7FC8A100AFAF3B /* Main.storyboard */,
+				07C08BA22C7FC8A200AFAF3B /* Assets.xcassets */,
+				07C08BA42C7FC8A200AFAF3B /* LaunchScreen.storyboard */,
+			);
+			path = Masaura;
+			sourceTree = "<group>";
+		};
+		07C08BAE2C7FC8A200AFAF3B /* MasauraTests */ = {
+			isa = PBXGroup;
+			children = (
+				07C08BAF2C7FC8A200AFAF3B /* MasauraTests.swift */,
+			);
+			path = MasauraTests;
+			sourceTree = "<group>";
+		};
+		07C08BB82C7FC8A200AFAF3B /* MasauraUITests */ = {
+			isa = PBXGroup;
+			children = (
+				07C08BB92C7FC8A200AFAF3B /* MasauraUITests.swift */,
+				07C08BBB2C7FC8A200AFAF3B /* MasauraUITestsLaunchTests.swift */,
+			);
+			path = MasauraUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07C08B912C7FC8A000AFAF3B /* Masaura */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07C08BBF2C7FC8A200AFAF3B /* Build configuration list for PBXNativeTarget "Masaura" */;
+			buildPhases = (
+				07C08B8E2C7FC8A000AFAF3B /* Sources */,
+				07C08B8F2C7FC8A000AFAF3B /* Frameworks */,
+				07C08B902C7FC8A000AFAF3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Masaura;
+			productName = Masaura;
+			productReference = 07C08B922C7FC8A000AFAF3B /* Masaura.app */;
+			productType = "com.apple.product-type.application";
+		};
+		07C08BAA2C7FC8A200AFAF3B /* MasauraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07C08BC22C7FC8A200AFAF3B /* Build configuration list for PBXNativeTarget "MasauraTests" */;
+			buildPhases = (
+				07C08BA72C7FC8A200AFAF3B /* Sources */,
+				07C08BA82C7FC8A200AFAF3B /* Frameworks */,
+				07C08BA92C7FC8A200AFAF3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07C08BAD2C7FC8A200AFAF3B /* PBXTargetDependency */,
+			);
+			name = MasauraTests;
+			productName = MasauraTests;
+			productReference = 07C08BAB2C7FC8A200AFAF3B /* MasauraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		07C08BB42C7FC8A200AFAF3B /* MasauraUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07C08BC52C7FC8A200AFAF3B /* Build configuration list for PBXNativeTarget "MasauraUITests" */;
+			buildPhases = (
+				07C08BB12C7FC8A200AFAF3B /* Sources */,
+				07C08BB22C7FC8A200AFAF3B /* Frameworks */,
+				07C08BB32C7FC8A200AFAF3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07C08BB72C7FC8A200AFAF3B /* PBXTargetDependency */,
+			);
+			name = MasauraUITests;
+			productName = MasauraUITests;
+			productReference = 07C08BB52C7FC8A200AFAF3B /* MasauraUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07C08B8A2C7FC8A000AFAF3B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					07C08B912C7FC8A000AFAF3B = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					07C08BAA2C7FC8A200AFAF3B = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 07C08B912C7FC8A000AFAF3B;
+					};
+					07C08BB42C7FC8A200AFAF3B = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 07C08B912C7FC8A000AFAF3B;
+					};
+				};
+			};
+			buildConfigurationList = 07C08B8D2C7FC8A000AFAF3B /* Build configuration list for PBXProject "Masaura" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 07C08B892C7FC8A000AFAF3B;
+			productRefGroup = 07C08B932C7FC8A000AFAF3B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07C08B912C7FC8A000AFAF3B /* Masaura */,
+				07C08BAA2C7FC8A200AFAF3B /* MasauraTests */,
+				07C08BB42C7FC8A200AFAF3B /* MasauraUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07C08B902C7FC8A000AFAF3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07C08B982C7FC8A000AFAF3B /* GameScene.sks in Resources */,
+				07C08BA12C7FC8A100AFAF3B /* Base in Resources */,
+				07C08BA32C7FC8A200AFAF3B /* Assets.xcassets in Resources */,
+				07C08B9A2C7FC8A100AFAF3B /* Actions.sks in Resources */,
+				07C08BA62C7FC8A200AFAF3B /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07C08BA92C7FC8A200AFAF3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07C08BB32C7FC8A200AFAF3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07C08B8E2C7FC8A000AFAF3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07C08B9C2C7FC8A100AFAF3B /* GameScene.swift in Sources */,
+				07C08B9E2C7FC8A100AFAF3B /* GameViewController.swift in Sources */,
+				07C08B962C7FC8A000AFAF3B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07C08BA72C7FC8A200AFAF3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07C08BB02C7FC8A200AFAF3B /* MasauraTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07C08BB12C7FC8A200AFAF3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07C08BBA2C7FC8A200AFAF3B /* MasauraUITests.swift in Sources */,
+				07C08BBC2C7FC8A200AFAF3B /* MasauraUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07C08BAD2C7FC8A200AFAF3B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07C08B912C7FC8A000AFAF3B /* Masaura */;
+			targetProxy = 07C08BAC2C7FC8A200AFAF3B /* PBXContainerItemProxy */;
+		};
+		07C08BB72C7FC8A200AFAF3B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07C08B912C7FC8A000AFAF3B /* Masaura */;
+			targetProxy = 07C08BB62C7FC8A200AFAF3B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		07C08B9F2C7FC8A100AFAF3B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07C08BA02C7FC8A100AFAF3B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		07C08BA42C7FC8A200AFAF3B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07C08BA52C7FC8A200AFAF3B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		07C08BBD2C7FC8A200AFAF3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		07C08BBE2C7FC8A200AFAF3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07C08BC02C7FC8A200AFAF3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Bahri-Doshi.Masaura";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		07C08BC12C7FC8A200AFAF3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Bahri-Doshi.Masaura";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		07C08BC32C7FC8A200AFAF3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Bahri-Doshi.MasauraTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Masaura.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Masaura";
+			};
+			name = Debug;
+		};
+		07C08BC42C7FC8A200AFAF3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Bahri-Doshi.MasauraTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Masaura.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Masaura";
+			};
+			name = Release;
+		};
+		07C08BC62C7FC8A200AFAF3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Bahri-Doshi.MasauraUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Masaura;
+			};
+			name = Debug;
+		};
+		07C08BC72C7FC8A200AFAF3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Bahri-Doshi.MasauraUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Masaura;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07C08B8D2C7FC8A000AFAF3B /* Build configuration list for PBXProject "Masaura" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07C08BBD2C7FC8A200AFAF3B /* Debug */,
+				07C08BBE2C7FC8A200AFAF3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07C08BBF2C7FC8A200AFAF3B /* Build configuration list for PBXNativeTarget "Masaura" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07C08BC02C7FC8A200AFAF3B /* Debug */,
+				07C08BC12C7FC8A200AFAF3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07C08BC22C7FC8A200AFAF3B /* Build configuration list for PBXNativeTarget "MasauraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07C08BC32C7FC8A200AFAF3B /* Debug */,
+				07C08BC42C7FC8A200AFAF3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07C08BC52C7FC8A200AFAF3B /* Build configuration list for PBXNativeTarget "MasauraUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07C08BC62C7FC8A200AFAF3B /* Debug */,
+				07C08BC72C7FC8A200AFAF3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07C08B8A2C7FC8A000AFAF3B /* Project object */;
+}
