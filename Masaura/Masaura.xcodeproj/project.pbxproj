@@ -19,16 +19,10 @@
 		07E37CC62C82BDF9002CC649 /* Intro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E37CC52C82BDF9002CC649 /* Intro.swift */; };
 		07E37CC82C894ADB002CC649 /* Mountains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E37CC72C894ADB002CC649 /* Mountains.swift */; };
 		07E37CCA2C895286002CC649 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E37CC92C895286002CC649 /* Map.swift */; };
+		81E581BA2CA3653200DB149E /* AuraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E581B92CA3653200DB149E /* AuraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		07C711D02C81164900C4A709 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07C711B72C81164800C4A709 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 07C711BE2C81164800C4A709;
-			remoteInfo = Masaura;
-		};
 		07C711DA2C81164900C4A709 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 07C711B72C81164800C4A709 /* Project object */;
@@ -47,24 +41,17 @@
 		07C711C42C81164800C4A709 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		07C711C62C81164900C4A709 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07C711C92C81164900C4A709 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		07C711CF2C81164900C4A709 /* MasauraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MasauraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C711D92C81164900C4A709 /* MasauraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MasauraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C711DD2C81164900C4A709 /* MasauraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasauraUITests.swift; sourceTree = "<group>"; };
 		07C711DF2C81164900C4A709 /* MasauraUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasauraUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		07E37CC52C82BDF9002CC649 /* Intro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro.swift; sourceTree = "<group>"; };
 		07E37CC72C894ADB002CC649 /* Mountains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mountains.swift; sourceTree = "<group>"; };
 		07E37CC92C895286002CC649 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		81E581B92CA3653200DB149E /* AuraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		07C711BC2C81164800C4A709 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		07C711CC2C81164900C4A709 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -94,7 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				07C711BF2C81164800C4A709 /* Masaura.app */,
-				07C711CF2C81164900C4A709 /* MasauraTests.xctest */,
 				07C711D92C81164900C4A709 /* MasauraUITests.xctest */,
 			);
 			name = Products;
@@ -113,6 +99,7 @@
 				07C711C42C81164800C4A709 /* HomePage.swift */,
 				07C711C62C81164900C4A709 /* Assets.xcassets */,
 				07C711C82C81164900C4A709 /* Preview Content */,
+				81E581B92CA3653200DB149E /* AuraView.swift */,
 			);
 			path = Masaura;
 			sourceTree = "<group>";
@@ -154,24 +141,6 @@
 			productReference = 07C711BF2C81164800C4A709 /* Masaura.app */;
 			productType = "com.apple.product-type.application";
 		};
-		07C711CE2C81164900C4A709 /* MasauraTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 07C711E62C81164900C4A709 /* Build configuration list for PBXNativeTarget "MasauraTests" */;
-			buildPhases = (
-				07C711CB2C81164900C4A709 /* Sources */,
-				07C711CC2C81164900C4A709 /* Frameworks */,
-				07C711CD2C81164900C4A709 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				07C711D12C81164900C4A709 /* PBXTargetDependency */,
-			);
-			name = MasauraTests;
-			productName = MasauraTests;
-			productReference = 07C711CF2C81164900C4A709 /* MasauraTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		07C711D82C81164900C4A709 /* MasauraUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07C711E92C81164900C4A709 /* Build configuration list for PBXNativeTarget "MasauraUITests" */;
@@ -203,10 +172,6 @@
 					07C711BE2C81164800C4A709 = {
 						CreatedOnToolsVersion = 15.4;
 					};
-					07C711CE2C81164900C4A709 = {
-						CreatedOnToolsVersion = 15.4;
-						TestTargetID = 07C711BE2C81164800C4A709;
-					};
 					07C711D82C81164900C4A709 = {
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 07C711BE2C81164800C4A709;
@@ -227,7 +192,6 @@
 			projectRoot = "";
 			targets = (
 				07C711BE2C81164800C4A709 /* Masaura */,
-				07C711CE2C81164900C4A709 /* MasauraTests */,
 				07C711D82C81164900C4A709 /* MasauraUITests */,
 			);
 		};
@@ -240,13 +204,6 @@
 			files = (
 				07C711CA2C81164900C4A709 /* Preview Assets.xcassets in Resources */,
 				07C711C72C81164900C4A709 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		07C711CD2C81164900C4A709 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,13 +229,7 @@
 				070809CC2C9F50ED003A9C37 /* RegisterView.swift in Sources */,
 				070809C82C9E2BFA003A9C37 /* DailyNotifs.swift in Sources */,
 				07E37CC62C82BDF9002CC649 /* Intro.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		07C711CB2C81164900C4A709 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				81E581BA2CA3653200DB149E /* AuraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,11 +245,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		07C711D12C81164900C4A709 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 07C711BE2C81164800C4A709 /* Masaura */;
-			targetProxy = 07C711D02C81164900C4A709 /* PBXContainerItemProxy */;
-		};
 		07C711DB2C81164900C4A709 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 07C711BE2C81164800C4A709 /* Masaura */;
@@ -482,44 +428,6 @@
 			};
 			name = Release;
 		};
-		07C711E72C81164900C4A709 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Bahri-Doshi.MasauraTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Masaura.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Masaura";
-			};
-			name = Debug;
-		};
-		07C711E82C81164900C4A709 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Bahri-Doshi.MasauraTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Masaura.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Masaura";
-			};
-			name = Release;
-		};
 		07C711EA2C81164900C4A709 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -571,15 +479,6 @@
 			buildConfigurations = (
 				07C711E42C81164900C4A709 /* Debug */,
 				07C711E52C81164900C4A709 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		07C711E62C81164900C4A709 /* Build configuration list for PBXNativeTarget "MasauraTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				07C711E72C81164900C4A709 /* Debug */,
-				07C711E82C81164900C4A709 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
