@@ -11,7 +11,7 @@ import UserNotifications
 class NotificationManager{
     static let instance = NotificationManager()
     
-    func requestAutherization(){
+    func requestAutherization(completion: @escaping(Bool) -> Void){
         let options: UNAuthorizationOptions = [.alert, .sound, .badge]
         UNUserNotificationCenter.current().requestAuthorization(options: options) { (sucess, error) in
             if let error = error {
@@ -20,6 +20,7 @@ class NotificationManager{
             else
             {
                 print("SUCESS")
+                completion(sucess)
             }
         }
         
@@ -47,9 +48,9 @@ class NotificationManager{
 
 struct DailyNotications: View {
     var body: some View {
-        Button("Request Permission")
+        VStack
         {
-            NotificationManager.instance.requestAutherization()
+            
         }
     }
 }

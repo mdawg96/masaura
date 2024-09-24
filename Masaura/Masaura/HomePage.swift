@@ -1,25 +1,41 @@
-//
-//  ContentView.swift
-//  Masaura
-//
-//  Created by Roan Bahri on 8/29/24.
-//
-
 import SwiftUI
 
-struct ContentView: View {
+struct HomePage: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            GeometryReader { geometry in
+                ZStack {
+                    NavigationLink(destination: Mountains()) {
+                        Image("home_mountains")
+                            .resizable()
+                            .scaledToFill()
+                            .edgesIgnoringSafeArea(.all)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                }
+                VStack
+                {
+                    Spacer()
+                    HStack
+                    {
+                        NavigationLink(destination: Map()) {
+                            Image("home_village_boy")
+                                .resizable()
+                                .edgesIgnoringSafeArea(.all)
+                                .frame(width: geometry.size.width * 0.4, height: geometry.size.height * 0.4) 
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                    }
+                }
+            }
         }
-        .padding()
+
     }
-    
 }
 
-#Preview {
-    ContentView()
+struct HomePage_Previews: PreviewProvider {
+    static var previews: some View {
+        HomePage()
+    }
 }
+
