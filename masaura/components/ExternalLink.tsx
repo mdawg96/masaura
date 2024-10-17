@@ -1,9 +1,10 @@
-import { Link } from 'expo-router';
+import { Href, Link } from 'expo-router';
 import { openBrowserAsync } from 'expo-web-browser';
+import React from 'react';
 import { type ComponentProps } from 'react';
 import { Platform } from 'react-native';
 
-type Props = Omit<ComponentProps<typeof Link>, 'href'> & { href: string };
+type Props = Omit<ComponentProps<typeof Link>, 'href'> & { href: Href<string | object> };
 
 export function ExternalLink({ href, ...rest }: Props) {
   return (
@@ -16,7 +17,8 @@ export function ExternalLink({ href, ...rest }: Props) {
           // Prevent the default behavior of linking to the default browser on native.
           event.preventDefault();
           // Open the link in an in-app browser.
-          await openBrowserAsync(href);
+          const url = typeof href === 'string' ? href : href.pathname;
+          await openBrowserAsync(url);
         }
       }}
     />
