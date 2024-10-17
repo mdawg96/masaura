@@ -1,0 +1,22 @@
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Add from '../components/addPost';
+
+const Tab = createBottomTabNavigator();
+
+function MyTabs() {
+  return (
+    <Tab.Navigator>
+      {/* ... other tabs ... */}
+      <Tab.Screen 
+        name="Add" 
+        component={Add} 
+        options={{
+          title: 'Add Post',  // This will change the header title
+          // ... other options ...
+        }}
+      />
+      {/* ... other tabs ... */}
+    </Tab.Navigator>
+  );
+}
+
