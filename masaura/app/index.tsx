@@ -35,7 +35,8 @@ export default function LoadingScreen() {
       useNativeDriver: true,
     }).start(() => {
       // Navigate to the main screen after the fade animation completes
-      router.replace('/events');  // Navigate to the "home" screen after loading
+      // TODO: navigate to the login screen
+      router.replace('/signup')
     });
   };
 

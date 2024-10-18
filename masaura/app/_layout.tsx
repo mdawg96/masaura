@@ -35,6 +35,7 @@ export default function RootLayout() {
         <Stack.Screen name="addPost" options={{ headerShown: true, headerTitle: 'Add Post'}} />
         <Stack.Screen name="hostEvent" options={{ headerShown: true, headerTitle: 'Host Event', headerStyle: { backgroundColor: '#000000'}, headerTintColor: 'white'}} />
         <Stack.Screen name="chooseFlyer" options={{ headerShown: true, headerTitle: ""}}/>
+        <Stack.Screen name="signup" options={{ headerShown: false, headerTitle: 'Add Post'}} />
       </Stack>
     </ThemeProvider>
   );

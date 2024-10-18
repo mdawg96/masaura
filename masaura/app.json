@@ -39,7 +39,9 @@
         {
           "locationAlwaysAndWhenInUsePermission": "Allow Masaura to use your location."
         }
-      ]
+      ],
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth"
     ],
     "experiments": {
       "typedRoutes": true
