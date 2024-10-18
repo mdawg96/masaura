@@ -1,53 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, Text, TextInput, TouchableOpacity, Modal, KeyboardAvoidingView, Platform } from 'react-native';
+import { StyleSheet, View, Text, TextInput, TouchableOpacity } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import * as Location from 'expo-location'
-import { collection, addDoc, getDocs } from 'firebase/firestore';
+import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase';
-import axios from 'axios';
+import { useRouter } from 'expo-router';
 import DropDownPicker from 'react-native-dropdown-picker';
-import SHA256 from 'crypto-js/sha256';
 
 const Map = () => {
+  const router = useRouter();
   const [location, setLocation] = useState(null);
   const [region, setRegion] = useState(null);
   const [search, setSearch] = useState(null);
-  const [modalVisible, setModalVisible] = useState(false);
-  const [eventTitle, setEventTitle] = useState(null);
-  const [eventAddress, setEventAddress] = useState(null);
   const [allMarkers, setMarkers] = useState([]);
   const [filteredMarkers, setFilteredMarkers] = useState([]);
-  const [ageOpen, setAgeOpen] = useState(false);
-  const [ageRestriction, setAgeRestriction] = useState(null);
-  const [ageOptions, setAgeOptions] = useState([
-    { label: 'Everyone', value: 'Everyone' },
-    { label: '18+', value: '18+' },
-    { label: '21+', value: '21+' },
-  ]);
-  const [eventTypeOpen, setEventTypeOpen] = useState(false);
-  const [eventType, setEventType] = useState(null);
-  const [eventOptions, setEventOptions] = useState([
-    { label: 'Party', value: 'Party' },
-    { label: 'Conference', value: 'Conference' },
-    { label: 'Event', value: 'Event' },
-  ]);
-  const [eventFilter, setEventFilter] = useState(null);
-  const [eventFilterOpen, setEventFilterOpen] = useState(null);
-  const [eventFilterOptions, setEventFilterOptions] = useState([
-    {label: 'Select Type', value: null},
-    { label: 'Party', value: 'Party' },
-    { label: 'Conference', value: 'Conference' },
-    { label: 'Event', value: 'Event' },
-  ]);
   const [ageFilter, setAgeFilter] = useState(null);
-  const [ageFilterOpen, setAgeFilterOpen] = useState(null);
+  const [ageFilterOpen, setAgeFilterOpen] = useState(false);
   const [ageFilterOptions, setAgeFilterOptions] = useState([
-    {label: 'Select Age', value: null},
     { label: 'Everyone', value: 'Everyone' },
     { label: '18+', value: '18+' },
     { label: '21+', value: '21+' },
   ]);
-  const [hash, eventHash] = useState('');
 
   useEffect(() => {
     (async () => {
@@ -138,66 +111,8 @@ const Map = () => {
       filtered = filtered.filter(marker => marker.ageRating === ageFilter);
     }
 
-    if (eventFilter) {
-      filtered = filtered.filter(marker => marker.type === eventFilter);
-    }
-
     setFilteredMarkers(filtered);
-  }, [ageFilter, eventFilter, allMarkers]);
-
-  const addEvent = async () => {
-    try {
-      if (!eventTitle || !eventAddress) {
-        alert('Make sure all fields are filled out.');
-        return;
-      }
-
-      const response = await axios.get(
-        `https://nominatim.openstreetmap.org/search?format=json&limit=1&q=${encodeURIComponent(eventAddress)}`
-      );
-
-      if (response.data.length > 0) {
-        const { lat, lon } = response.data[0];
-
-        await addDoc(collection(db, "events"), {
-          title: eventTitle,
-          address: eventAddress,
-          coordinates: {
-            latitude: parseFloat(lat),
-            longitude: parseFloat(lon),
-          },
-          type: eventType,
-          age: ageRestriction,
-          eventHash: SHA256(eventTitle).toString(),
-        });
-
-        setEventTitle('');
-        setEventAddress('');
-        setModalVisible(false);
-        fetchMarkers();
-      } else {
-        alert('Address not found. Please enter a valid address.');
-      }
-    } catch (e) {
-      console.error("Error adding document: ", e);
-      alert('An error occurred while adding the event. Please try again.');
-    }
-  };
-
-  if (!region) {
-    return (
-      <View style={styles.container}>
-        <Text>Fetching location...</Text>
-      </View>
-    );
-  }
-
-  const clearEvent = () => {
-    setEventTitle(null)
-    setEventAddress(null)
-    setAgeRestriction(null)
-    setModalVisible(false)
-  }
+  }, [ageFilter, allMarkers]);
 
   return (
     <View style={styles.container}>
@@ -208,53 +123,29 @@ const Map = () => {
           value={search}
           onChangeText={text => setSearch(text)}
         />
-        <TouchableOpacity style={styles.plusButton} onPress={() => setModalVisible(true)}>
+        <TouchableOpacity 
+          style={styles.plusButton} 
+          onPress={() => router.push('/hostEvent')}
+        >
           <Text style={styles.plusText}>+</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.filterContainer}>
-        <View style={{ zIndex: 3000 }}>
-          <DropDownPicker
-            open={ageFilterOpen}
-            value={ageFilter}
-            items={ageFilterOptions}
-            setOpen={setAgeFilterOpen}
-            setValue={setAgeFilter}
-            setItems={setAgeFilterOptions}
-            style={styles.subFilterDropdown}
-            defaultNull={true}  // Add this if supported
-            placeholder="Select Age"
-            dropDownContainerStyle={styles.subFilterDropdownList}
-            textStyle={{
-              fontSize: 7,
-              padding: 2,
-            }}
-            zIndex={3000}
-            zIndexInverse={1000}
-            onOpen={() => setEventTypeOpen(false)}
-          />
-        </View>
-        <View style={{ zIndex: 2000 }}>
-          <DropDownPicker
-            open={eventFilterOpen}
-            value={eventFilter}
-            items={eventFilterOptions}
-            setOpen={setEventFilterOpen}
-            setValue={setEventFilter}
-            setItems={setEventFilterOptions}
-            style={styles.subFilterDropdown}
-            defaultNull={true}  // Add this if supported
-            placeholder="Select Type"
-            dropDownContainerStyle={styles.subFilterDropdownList}
-            textStyle={{
-              fontSize: 7,
-              padding: 2,
-            }}
-            zIndex={2000}
-            zIndexInverse={2000}
-            onOpen={() => setAgeOpen(false)}
-          />
-        </View>
+        <DropDownPicker
+          open={ageFilterOpen}
+          value={ageFilter}
+          items={ageFilterOptions}
+          setOpen={setAgeFilterOpen}
+          setValue={setAgeFilter}
+          setItems={setAgeFilterOptions}
+          style={styles.subFilterDropdown}
+          placeholder="Age"
+          dropDownContainerStyle={styles.subFilterDropdownList}
+          textStyle={styles.dropdownText}
+          zIndex={3000}
+          zIndexInverse={1000}
+          onOpen={() => setAgeFilterOpen(false)}
+        />
       </View>
       <MapView
         style={styles.map}
@@ -271,85 +162,6 @@ const Map = () => {
           </Marker>
         ))}
       </MapView>
-      <Modal
-        animationType="fade"
-        transparent={true}
-        visible={modalVisible}
-        onRequestClose={() => setModalVisible(false)}
-      >
-        <KeyboardAvoidingView
-          behavior={Platform.OS === "ios" ? "padding" : "height"}
-          style={styles.fullScreenBlur}
-        >
-          <View style={styles.modalContainer}>
-            <Text style={styles.modalTitle}>Host an Event</Text>
-            <TextInput
-              style={styles.input}
-              placeholder="Event Title"
-              value={eventTitle}
-              onChangeText={setEventTitle}
-            />
-            <TextInput
-              style={styles.input}
-              placeholder="Event Address"
-              value={eventAddress}
-              onChangeText={setEventAddress}
-            />
-            <View style={[styles.dropdownWrapper, { zIndex: 3000 }]}>
-              <DropDownPicker
-                open={ageOpen}
-                value={ageRestriction}
-                items={ageOptions}
-                setOpen={setAgeOpen}
-                setValue={setAgeRestriction}
-                setItems={setAgeOptions}
-                placeholder="Select the Age Restriction"
-                placeholderStyle={{
-                  color: '#888',
-                }}
-                style={styles.dropdown}
-                dropDownContainerStyle={styles.dropdownList}
-                zIndex={3000}
-                zIndexInverse={1000}
-                onOpen={() => setEventTypeOpen(false)}
-              />
-            </View>
-            <View style={[styles.dropdownWrapper, { zIndex: 2000 }]}>
-              <DropDownPicker
-                open={eventTypeOpen}
-                value={eventType}
-                items={eventOptions}
-                setOpen={setEventTypeOpen}
-                setValue={setEventType}
-                setItems={setEventOptions}
-                placeholder="Select Event Type"
-                placeholderStyle={{
-                  color: '#888',
-                }}
-                style={styles.dropdown}
-                dropDownContainerStyle={styles.dropdownList}
-                zIndex={2000}
-                zIndexInverse={2000}
-                onOpen={() => setAgeOpen(false)}
-              />
-            </View>
-            <View style={styles.buttonContainer}>
-              <TouchableOpacity
-                style={styles.modalButton}
-                onPress={() => clearEvent()}
-              >
-                <Text style={styles.buttonText}>Close</Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={styles.modalButton}
-                onPress={() => addEvent()}
-              >
-                <Text style={styles.buttonText}>Save</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
-        </KeyboardAvoidingView>
-      </Modal>
     </View>
   );
 };
@@ -498,25 +310,31 @@ const styles = StyleSheet.create({
   filterContainer: {
     position: 'absolute',
     top: '14%',
-    left: '10%',
+    left: '5%',
+    right: '5%',
     flexDirection: 'row',
-    justifyContent: 'left',
-    marginTop: 6, // Adjust space between search bar and dropdowns
-    zIndex: 1, // Ensures dropdowns display above map
-    width: '100%',
+    justifyContent: 'space-between',
+    marginTop: 6,
+    zIndex: 1,
   },
   subFilterDropdown: {
-    width: '50%', // Ensures each dropdown takes up half of the available width
-    minHeight: 10,
-    backgroundColor: 'white', // White background
-    borderColor: '#888', // Light gray border
-    marginHorizontal: -10
+    backgroundColor: 'white',
+    borderColor: '#888',
+    width: '48%', // Adjust this value to control the width of each dropdown
   },
   subFilterDropdownList: {
-    backgroundColor: 'white', // Background color of the dropdown options
-    borderColor: '#888', // Light gray border for the dropdown list
-    marginLeft: -10,
-    width: '50%'
+    backgroundColor: 'white',
+    borderColor: '#888',
+  },
+  placeholderStyle: {
+    color: '#888',
+  },
+  dropdownTextStyle: {
+    color: '#888',
+  },
+  dropdownText: {
+    fontSize: 12,
+    color: 'black',
   },
 });
 
